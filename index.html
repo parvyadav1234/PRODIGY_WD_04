@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Developer Portfolio</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0F0F1C;
+      color: #FFFFFF;
+      line-height: 1.6;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #2B86C5;
+      padding: 15px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.8em;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-links li {
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      font-size: 1.1em;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #FFC312;
+    }
+
+    /* Home Section */
+    #home {
+      background: linear-gradient(to right, #2B86C5, #203A43, #0F0F1C);
+      padding: 100px 0;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .hero img {
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      border: 5px solid #FFC312;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #FFC312;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+    }
+
+    .cta-button {
+      background-color: #FFC312;
+      color: #0F0F1C;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      margin-top: 20px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      background-color: #e6b800;
+    }
+
+    /* About Section */
+    #about {
+      padding: 50px 0;
+      background-color: #1B1B2F;
+      text-align: center;
+    }
+
+    .about-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .education, .experience {
+      text-align: left;
+      margin-top: 30px;
+    }
+
+    h3 {
+      margin-top: 15px;
+      color: #2B86C5;
+    }
+
+    /* Projects Section */
+    #projects {
+      background-color: #14142B;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .projects-container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .project-cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .project-card {
+      width: 30%;
+      background-color: #222240;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .project-link {
+      display: block;
+      margin-top: 10px;
+      color: #2B86C5;
+      font-size: 1.1em;
+    }
+
+    .project-link:hover {
+      color: #FFC312;
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    #contact {
+      padding: 50px 0;
+      background-color: #1B1B2F;
+      text-align: center;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 70%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      background-color: #121225;
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #2B86C5;
+    }
+
+    .contact-form button {
+      background-color: #2B86C5;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1.2em;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #24679e;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #14142B;
+      color: #b2bec3;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">MyPortfolio</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="hero">
+      <img src="requirenment for project/WhatsApp Image 2025-04-30 at 16.20.30.jpeg" alt="Your Photo" class="profile-img">
+      <h1>Hi, I'm Parv yadav</h1>
+      <p>Your Friendly Web Developer</p>
+      <a href="#about" class="cta-button">Learn More About Me</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="about-container">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate web developer with a love for creating responsive, user-friendly websites and web applications. I have a background in web development and experience in front-end and back-end development. My skills include HTML, CSS, JavaScript, React, Node.js, and more!</p>
+      <div class="education">
+        <h3>Education</h3>
+        <ul>
+          <li>Bachelor of Science in Computer Science, from Amity universty rajasthan - 2023-27</li>
+          <li>Web Development Bootcamp, udemy - 2025</li>
+        </ul>
+      </div>
+      <div class="experience">
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects-container">
+      <h2>My Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          
+          <h3>Project 1: <br>[Stop watch]</h3>
+          <p>Built a user-friendly stopwatch web app with start, pause, reset, and lap time tracking </p>
+          <a href="stopwatchapp.html"  class="\parv yadav in\landing page\index.html">View Project</a>
+        </div>
+        <div class="project-card">
+         
+          <h3>Project 2: <br>[tic tac toe]</h3>
+          <p>Built a user-friendly risponsive gave tic tac toe</p>
+          <a href="tictactoe.html"  class="project-link">View Project</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-container">
+      <h2>Contact Me</h2>
+      <p>.</p>
+      <form action="submit-form.php" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="cta-button">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>© 2025 [PARV YADAV ] | All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
